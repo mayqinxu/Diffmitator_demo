@@ -3,12 +3,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature | ””</title>
+<title>Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature</title>
 <meta name="generator" content="Jekyll v3.9.5" />
 <meta property="og:title" content="Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="””" />
-<meta property="og:description" content="””" />
 <link rel="canonical" href="http://localhost:4000/Diffmitator_demo/" />
 <meta property="og:url" content="http://localhost:4000/Diffmitator_demo/" />
 <meta property="og:site_name" content="Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature" />
@@ -16,7 +14,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"””","headline":"Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature","name":"Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature","url":"http://localhost:4000/Diffmitator_demo/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","headline":"Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature","name":"Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature","url":"http://localhost:4000/Diffmitator_demo/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Diffmitator_demo/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/Diffmitator_demo/feed.xml" title="Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature" /></head>
 <body><header class="site-header" role="banner">
@@ -31,21 +29,113 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/Diffmitator_demo/about/">About</a></div>
+        <div class="trigger"><a class="page-link" href="/Diffmitator_demo/abstract/">Abstract</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Feb 19, 2024</span>
-        <h3>
-          <a class="post-link" href="/Diffmitator_demo/jekyll/update/2024/02/19/welcome-to-jekyll.html">
-            Welcome to Jekyll!
-          </a>
-        </h3></li></ul>
+        <div class="home"><p>The performance of Diffmitator in the task of audio continuation. The first 2.5 seconds consist of reference content, while the subsequent 7.5 seconds contain the continuation content.</p>
 
-    <p class="rss-subscribe">subscribe <a href="/Diffmitator_demo/feed.xml">via RSS</a></p></div>
+<table>
+	<tr>
+		<th>Text Prompt</th>
+		<th>Reference</th>
+		<th>Diffmitator-vanilla</th>
+		<th>Diffmitator-C-Copaint</th>
+	</tr>
+	<tr>
+		<td>A church bell ringing repeatedly.</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/bbc_church_bell_1_16khz_mono_ref.wav" type="audio/wav" />
+			</audio>
+		</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/bbc_church_bell_1_tangosAC_25s_htsat_vanilla.wav" type="audio/wav" />
+			</audio>
+		</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/bbc_church_bell_1_tangosAC_25s_htsat_copaint.wav" type="audio/wav" />
+			</audio>
+		</td>
+	</tr>
+	<tr>
+		<td>A bird is singing.</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/bbcsfx_birds_2_16khz_mono_ref.wav" type="audio/wav" />
+			</audio>
+		</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/bbcsfx_birds_2_16khz_mono_tangosAC_htsat_vanilla.wav" type="audio/wav" />
+			</audio>
+		</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/bbcsfx_birds_2_16khz_mono_tangosAC_htsat_copaint.wav" type="audio/wav" />
+			</audio>
+		</td>
+	</tr>
+	<tr>
+		<td>A dog is barking.</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/bbcsfx_dog_barking_16khz_mono_ref.wav" type="audio/wav" />
+			</audio>
+		</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/bbcsfx_dog_barking_tangosAC_25s_htsat_vanilla.wav" type="audio/wav" />
+			</audio>
+		</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/bbcsfx_dog_barking_tangosAC_25s_htsat_copaint.wav" type="audio/wav" />
+			</audio>
+		</td>
+	</tr>
+	<tr>
+		<td>Persian cat meowing.</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/cat_meowing_16khz_mono_ref.wav" type="audio/wav" />
+			</audio>
+		</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/cat_meowing_tangosAC_25s_htsat_vanilla.wav" type="audio/wav" />
+			</audio>
+		</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/cat_meowing_tangosAC_25s_htsat_copaint.wav" type="audio/wav" />
+			</audio>
+		</td>
+	</tr>
+	<tr>
+		<td>Tick-tocking by a clock.</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/clock_16khz_mono_ref.wav" type="audio/wav" />
+			</audio>
+		</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/clock_vanilla.wav" type="audio/wav" />
+			</audio>
+		</td>
+		<td>
+			<audio controls="">
+  				<source src="demos/audio/clock_copaint.wav" type="audio/wav" />
+			</audio>
+		</td>
+	</tr>
+
+</table>
+</div>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -58,14 +148,14 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature</li><li><a class="u-email" href="mailto:"></a></li></ul>
+          <li class="p-name">Diffmitator: Timbre Controllable Audio Generation Guided By Audio Classification Feature</li></ul>
       </div>
 
       <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
 </div>
 
       <div class="footer-col footer-col-3">
-        <p>&quot;&quot;</p>
+        <p></p>
       </div>
     </div>
 
